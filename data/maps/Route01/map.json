@@ -19,12 +19,12 @@
       "direction": "dive"
     },
     {
-      "map": "MAP_PALLET_TOWN",
+      "map": "MAP_PALLET_TOWN_PAL",
       "offset": 0,
       "direction": "down"
     },
     {
-      "map": "MAP_VIRIDIAN_CITY",
+      "map": "MAP_VIRIDIAN_CITY_PAL",
       "offset": -26,
       "direction": "up"
     }

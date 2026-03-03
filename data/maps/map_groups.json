@@ -75,8 +75,7 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_IndoorRoute124",
-    "gMapGroup_KantoTownsRoutes",
+    "gMapGroup_KantoTownsRoutes_Pal",
     "gMapGroup_IndoorPallet",
     "gMapGroup_Unused"
   ],
@@ -1165,10 +1164,10 @@
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
   ],
-  "gMapGroup_KantoTownsRoutes": [
-    "PalletTown",
+  "gMapGroup_KantoTownsRoutes_Pal": [
+    "PalletTown_Pal",
     "Route01",
-    "ViridianCity"
+    "ViridianCity_Pal"
   ],
   "gMapGroup_IndoorPallet": [
     "BlueHouse_2F",
