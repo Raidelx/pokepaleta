@@ -13,6 +13,16 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_PALLET_TOWN",
+      "name": "PalletTown_Layout",
+      "width": 22,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/PalletTown/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown/map.bin"
+    },
+    {
       "id": "LAYOUT_SLATEPORT_CITY",
       "name": "SlateportCity_Layout",
       "width": 40,
@@ -9323,6 +9333,116 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_ROUTE01",
+      "name": "Route01_Layout",
+      "width": 22,
+      "height": 55,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route01/border.bin",
+      "blockdata_filepath": "data/layouts/Route01/map.bin"
+    },
+    {
+      "id": "LAYOUT_RED_HOUSE_2",
+      "name": "RedHouse_2_Layout",
+      "width": 20,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/RedHouse_2/border.bin",
+      "blockdata_filepath": "data/layouts/RedHouse_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_RED_HOUSE",
+      "name": "RedHouse_Layout",
+      "width": 22,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/RedHouse/border.bin",
+      "blockdata_filepath": "data/layouts/RedHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_RED_HOUSE_2F",
+      "name": "RedHouse_2F_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/RedHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/RedHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLUE_HOUSE",
+      "name": "BlueHouse_Layout",
+      "width": 20,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BlueHouse/border.bin",
+      "blockdata_filepath": "data/layouts/BlueHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLUE_HOUSE_2F",
+      "name": "BlueHouse_2F_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/BlueHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/BlueHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OAK_LAB",
+      "name": "OakLab_Layout",
+      "width": 14,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/OakLab/border.bin",
+      "blockdata_filepath": "data/layouts/OakLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLUE_HOUSE_1F",
+      "name": "BlueHouse_1F_Layout",
+      "width": 20,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BlueHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/BlueHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RED_HOUSE_1F",
+      "name": "RedHouse_1F_Layout",
+      "width": 20,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/RedHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/RedHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GENERIC_POKE_CENTER",
+      "name": "Generic_PokeCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Generic_PokeCenter/border.bin",
+      "blockdata_filepath": "data/layouts/Generic_PokeCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY",
+      "name": "ViridianCity_Layout",
+      "width": 54,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ViridianCity/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity/map.bin"
     }
   ]
 }
