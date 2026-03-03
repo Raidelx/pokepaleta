@@ -1,0 +1,71 @@
+script Route01_EventScript_Sign1{
+    lockall
+    msgbox("Mira, esta es la Ruta 1.\n Cuidado te ataca un Rattata!")
+    releaseall
+}
+
+script Route01_EventScript_Sign2{
+    lockall
+    msgbox("¿Porqué el mar es azúl?\p Porque los peces hacen:\n Blu blu blu")
+    releaseall
+}
+
+script Route01_EventScript_Sign3{
+    lockall
+    msgbox("Ciudad verde al norte, Pueblo paleta al sur")
+    releaseall
+}
+
+
+mapscripts Route01_MapScripts {
+}
+
+script Route01_EventScript_JokeFisherman{
+    msgbox("Abajo escribí el secreto sobre el azul", MSGBOX_NPC)
+
+}
+
+script Route01_EventScript_Boy1Battle {
+    trainerbattle_single (TRAINER_BOY1_ROUTE_01,
+        "HOLA éste también es mi primer Pokémon",
+        "No se vale, tu Pokémon es más fuerte")
+    msgbox ("Tendré que atrapar más Pokémon...", MSGBOX_AUTOCLOSE)
+    end
+}
+
+
+
+script Route01_EventScript_Boy2Battle{
+    trainerbattle_single (TRAINER_BOY2_ROUTE_01,
+        "Estoy perdido,\n ¿sabes hacia donde es Pueblo Paleta?",
+        "Ah ya ví, hay un cartel allí")
+    msgbox("No entiendo porqué ésta es la Ruta 1\n ¿Qué hace que sea la primera?", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route01_EventScript_GirlBattle{
+    trainerbattle_single (TRAINER_GIRL_ROUTE_01,
+        "JAJA, otro ingenuo con su primer Pokémon",
+        "No es justo, ¿cómo eres tan fuerte?")
+    msgbox("Me quedo aquí para pelear con novatos desprevenidos.", MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route01_EventScript_Camper{
+    msgbox("¿Sabías que el tipo Fuego hace daño al \n Planta, el Planta al Agua, y el Agua\l al Fuego?\p ¿Sí?\p Pues que sabelotodo.", MSGBOX_NPC)
+}
+
+script Route01_EventScript_Expert{
+    msgbox("Me encanta mi Pikachu\n ¿A que está lindo?", MSGBOX_NPC)
+}
+
+script Route01_EventScript_Pikachu{
+    msgbox("Pika pi.", MSGBOX_NPC)
+}
+
+script Route01_EventScript_Item{
+    giveitem(ITEM_POTION)
+    removeobject(8)
+    setflag(FLAG_ITEM_ROUTE01)
+    end
+}

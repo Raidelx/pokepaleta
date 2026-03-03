@@ -1,0 +1,335 @@
+
+script PalletTown_EventScript_LittlerootSign{
+    lockall
+    msgbox("Puerta para volver al juego original")
+    releaseall
+}
+
+script PalletTown_EventScript_RedHouseSign{
+    lockall
+    msgbox("Casa de Rojo")
+    releaseall
+}
+
+script PalletTown_EventScript_BlueHouseSign{
+    lockall
+    msgbox("Casa de Azul Oak")
+    releaseall
+}
+
+script PalletTown_EventScript_Sign1{
+    lockall
+    msgbox("Hola {PLAYER} :)")
+    releaseall
+}
+
+script PalletTown_EventScript_Sign2{
+    lockall
+    msgbox("Para arriba está el laboratorio.")
+    releaseall
+}
+
+mapscripts PalletTown_MapScripts {
+}
+
+script PalletTown_EventScript_Archie {
+	msgbox ("Se me cayó el helado en el río.\p :(", MSGBOX_NPC)
+}
+
+script PalletTown_EventScript_Girl {
+	msgbox ("Que bonito Pokémon, verdad?", MSGBOX_NPC)
+}
+
+script PalletTown_EventScript_Boy {
+	msgbox ("Me traje este Dusclops para\nimpresionar a las nenas", MSGBOX_NPC)
+}
+
+script PalletTown_EventScript_Dusclops {
+	msgbox ("Duscloooops", MSGBOX_NPC)
+}
+
+#-------RedHouse--------
+
+script PalletTown_RedHouse_EventScript_Mom {
+    if (flag(FLAG_MET_MOM)) {
+        if (flag(FLAG_SYS_POKEMON_GET)){
+            msgbox ("Ay mi Rojo...\nDejame curar tus Pokémon, anda.", MSGBOX_NPC)
+            playfanfare (MUS_HEAL)
+            special (HealPlayerParty)
+            setrespawn (HEAL_LOCATION_RED_HOUSE_1F)
+            waitfanfare
+            msgbox ("Suerte allí afuera, cariño.", MSGBOX_AUTOCLOSE)
+            releaseall
+        end
+        }
+        else{
+            msgbox ("Cuando tengas Pokémon ven a verme,\ncariño.", MSGBOX_NPC)
+        }
+        
+    }
+    else{
+    msgbox("Hola, soy la mamá de Rojo.\p"
+    "Mi hijo se la pasa en sus viajes y\n"
+    "aventuras así que a veces se olvida\l"
+    "de mi nieto, Key.\p"
+    "Aún así, yo disfruto mucho mimándolo\n"
+    "como a mi propio hijo.", MSGBOX_NPC)
+    setflag(FLAG_MET_MOM)
+    }
+}
+script PalletTown_RedHouse_EventScript_Red {
+	msgbox ("Sí sí, soy Rojo, el legendario entrenador\n"
+    "Pokémon. Solo soy un tipo que le gustan\l"
+    "las peleas. La fama puede ser tan\lmolesta.\p"
+    "Además, temo que a Key se le sube mucho\n"
+    "a la cabeza aveces.", MSGBOX_NPC)
+}
+
+script PalletTown_RedHouse_EventScript_Key {
+	msgbox ("¿Quien eres?\p"
+    "No me importa, soy Keyden, el hijo\n"
+    "del Legendario Entrenador Rojo de\l"
+    "Pueblo Paleta.\p"
+    "Algun dia sere tan increible como mi papá\n"
+    "y derrotaré a la liga Pokémon, así que\l"
+    "APARTATE DE MI CAMINO.", MSGBOX_NPC)
+}
+
+script PalletTown_EventScript_BlockGrass {
+    lockall
+
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        release
+        end
+    }
+
+    msgbox("¡Es peligroso ir a la hierba alta\n"
+           "sin un Pokémon!",
+           MSGBOX_DEFAULT)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Back)
+    waitmovement(0)
+
+    releaseall
+    end
+}
+
+movement Movement_Back {
+    walk_down
+}
+
+#-------BlueHouse--------
+
+script PalletTown_BlueHouse_EventScript_Blue {
+	msgbox ("Hola, soy Azul, el nieto del Prof. Oak \p"
+    "Soy el líder de gimnasio de Ciudad Verde,\n"
+    "al final de la Ruta 01.\p"
+    "Fuí campeón hace 20 años, pero mi\n"
+    "victoria no duró mucho, jaja.\l"
+    "Rojo me venció el mismo día.\p"
+    "Solía ser un gruñón al respecto,\n"
+    "pero nuestras aventuras nos han\l"
+    "hecho inseparables...\p"
+    "No le digas que dije eso.", MSGBOX_NPC)
+}
+
+script PalletTown_BlueHouse_EventScript_Dana {
+	msgbox ("Hey! Qué haces en mi cuarto???\n"
+    "Mm? No eres de por aquí? Me llamo Dana\l"
+    "un gusto en conocerte\p"
+    "Justo me agarraste desempacando mis\n"
+    "cosas. Vengo de mi super-hiper-mega\l"
+    "increíbles vacaciones a Alolaaa.\p"
+    "Keyden va estar super celoso del\n"
+    "Pokémon que me atrapó mi tito.", MSGBOX_NPC)
+}
+
+#-------OakLab--------
+
+script PalletTown_OakLab_EventScript_ProfOak {
+	msgbox ("Hola jóven promesa. Soy el Prof. Oak\p"
+    "El avión aún me tiene sarandeado, pero\n"
+    "puedes hablar con mi coléga.", MSGBOX_NPC)
+}
+
+script PalletTown_OakLab_EventScript_ProfMau {
+	if (flag(FLAG_SYS_POKEMON_GET)){
+        if (!flag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)){
+            lockall
+            msgbox(format("Toma, éstas son Pokéballs, para que atrapes todos los Pokémon que te encuentres en tu camino"), MSGBOX_NPC)
+            giveitem (ITEM_POKE_BALL, 20)
+            playfanfare (MUS_OBTAIN_ITEM)
+            setflag (FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+
+            msgbox("Ademas, ten tu primera Pokédex", MSGBOX_NPC)
+            setflag(FLAG_SYS_POKEDEX_GET)
+            special (SetUnlockedPokedexFlags)
+            special (EnableNationalPokedex)
+            playfanfare (MUS_RG_OBTAIN_KEY_ITEM)
+
+            msgbox ("¡Mucha suerte!", MSGBOX_AUTOCLOSE)
+            releaseall
+            end
+        }
+        else{
+            msgbox("¡Mucha suerte!", MSGBOX_NPC)
+        }
+    }
+    else{
+    msgbox ("Hola {PLAYER}! Kevin me habló de tí\p"
+    "Soy el Prof. Mau! el Profesor Pokémon de\n"
+    "la región de Cosra.\l"
+    "Cualquier parecido con mi creador es pura\l"
+    "coincidencia.\p"
+    "Mira! Puedes tomar un Pokémon de la mesa,\n"
+    "si quieres, y probarlo luchando contra\l"
+    "Pokémon salvajes en la Ruta 1, al norte.", MSGBOX_NPC)
+    }
+}
+
+script PalletTown_OakLab_EventScript_PokeballBulb{
+    setvar(VAR_CHOSEN_STARTER , SPECIES_BULBASAUR)
+    
+    call(PalletTown_OakLab_EventScript_Starter)
+    end
+}
+
+script PalletTown_OakLab_EventScript_PokeballChar{
+    setvar(VAR_CHOSEN_STARTER , SPECIES_CHARMANDER)
+    
+    call(PalletTown_OakLab_EventScript_Starter)
+    end
+}
+
+script PalletTown_OakLab_EventScript_PokeballSquir{
+    setvar(VAR_CHOSEN_STARTER , SPECIES_SQUIRTLE)
+    
+    call(PalletTown_OakLab_EventScript_Starter)
+    end
+}
+
+script PalletTown_OakLab_EventScript_Starter {
+    lockall
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox ("Ya tienes un Pokémon inicial")
+        releaseall
+        end
+    }
+    else{
+        
+
+        showmonpic(VAR_CHOSEN_STARTER, 10, 3)
+
+        switch (var(VAR_CHOSEN_STARTER)) {
+
+        case SPECIES_BULBASAUR:
+            msgbox ("Bulbasaur es el inicial de Kanto de\n"
+                    "tipo planta, míralo que lindo\p"
+                    "Quieres tomar a Bulbasaur?", MSGBOX_YESNO)
+            break
+
+        case SPECIES_CHARMANDER:
+            msgbox ("Charmander es el inicial de Kanto de\n"
+                    "tipo fuego, míralo que lindo\p"
+                    "Quieres tomar a Charmander?", MSGBOX_YESNO)
+            break
+
+        case SPECIES_SQUIRTLE:
+            msgbox ("Squirtle es el inicial de Kanto de\n"
+                    "tipo agua, míralo que lindo\p"
+                    "Quieres tomar a Squirtle?", MSGBOX_YESNO)
+            break
+        }
+        
+        if (var(VAR_RESULT) == YES){
+            givemon(VAR_CHOSEN_STARTER, 5, ITEM_NONE)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                hidemonpic
+                playfanfare(MUS_OBTAIN_ITEM)
+                switch (var(VAR_CHOSEN_STARTER)) {
+
+                case SPECIES_BULBASAUR:
+                    msgbox("Has recibido un Bulbasaur")
+                    removeobject(3)
+                    setvar(VAR_STARTER_MON, 0)
+                    break
+
+                case SPECIES_CHARMANDER:
+                    msgbox("Has recibido un Charmander")
+                    removeobject(5)
+                    setvar(VAR_STARTER_MON, 1)
+                    break
+
+                case SPECIES_SQUIRTLE:
+                    msgbox("Has recibido un Squirtle")
+                    removeobject(4)
+                    setvar(VAR_STARTER_MON, 2)
+                    break
+                }
+                setflag(FLAG_SYS_POKEMON_GET)
+                call(NicknamePartyMon)
+                setrespawn (HEAL_LOCATION_RED_HOUSE_1F)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                hidemonpic
+                playfanfare(MUS_OBTAIN_ITEM)
+                switch (var(VAR_CHOSEN_STARTER)) {
+
+                case SPECIES_BULBASAUR:
+                    msgbox("Has recibido un Bulbasaur")
+                    removeobject(3)
+                    setvar(VAR_STARTER_MON, 0)
+                    break
+
+                case SPECIES_CHARMANDER:
+                    msgbox("Has recibido un Charmander")
+                    removeobject(5)
+                    setvar(VAR_STARTER_MON, 1)
+                    break
+
+                case SPECIES_SQUIRTLE:
+                    msgbox("Has recibido un Squirtle")
+                    removeobject(4)
+                    setvar(VAR_STARTER_MON, 2)
+                    break
+                }
+                setflag(FLAG_SYS_POKEMON_GET)
+                setrespawn (HEAL_LOCATION_RED_HOUSE_1F)
+            }
+            else{
+                hidemonpic
+                msgbox("No hay espacio en tu equipo")
+            }
+        }
+        else {
+            hidemonpic
+            msgbox("Ta bien, puedes ver los demás.")}
+        waitmessage
+        releaseall
+        end
+    }
+}
+
+
+script NicknamePartyMon{
+ 
+    msgbox("Quieres darle un mote?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+ 
+ 
+}
+ 
+script NicknameBoxMon{
+ 
+    msgbox("Quieres darle un mote?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    call(Common_EventScript_TransferredToPC)
+ 
+}
