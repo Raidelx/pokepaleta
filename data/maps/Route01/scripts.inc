@@ -80,6 +80,16 @@ Route01_EventScript_Pikachu::
 	return
 
 
+Route01_EventScript_Item::
+# 67 "data/maps/Route01/scripts.pory"
+	giveitem ITEM_POTION
+# 68 "data/maps/Route01/scripts.pory"
+	removeobject 8
+# 69 "data/maps/Route01/scripts.pory"
+	setflag FLAG_ITEM_ROUTE01
+	end
+
+
 Route01_EventScript_Sign1_Text_0:
 # 3 "data/maps/Route01/scripts.pory"
 	.string "Mira, esta es la Ruta 1.\n Cuidado te ataca un Rattata!$"

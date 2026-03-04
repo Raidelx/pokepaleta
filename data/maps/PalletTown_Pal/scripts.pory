@@ -29,7 +29,7 @@ script PalletTown_EventScript_Sign2{
     releaseall
 }
 
-mapscripts PalletTown_MapScripts {
+mapscripts PalletTown_Pal_MapScripts {
 }
 
 script PalletTown_EventScript_Archie {
