@@ -76,8 +76,7 @@
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_KantoTownsRoutes_Pal",
-    "gMapGroup_IndoorPallet",
-    "gMapGroup_Unused"
+    "gMapGroup_IndoorPallet"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1166,7 +1165,7 @@
   ],
   "gMapGroup_KantoTownsRoutes_Pal": [
     "PalletTown_Pal",
-    "Route01",
+    "Route01_Pal",
     "ViridianCity_Pal"
   ],
   "gMapGroup_IndoorPallet": [
@@ -1176,10 +1175,5 @@
     "RedHouse_2F",
     "OakLab",
     "Generic_PokeCenter"
-  ],
-  "gMapGroup_Unused": [
-    "RedHouse",
-    "RedHouse_2",
-    "BlueHouse"
   ]
 }

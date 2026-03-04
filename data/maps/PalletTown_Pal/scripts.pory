@@ -29,8 +29,7 @@ script PalletTown_EventScript_Sign2{
     releaseall
 }
 
-mapscripts PalletTown_MapScripts {
-}
+
 
 script PalletTown_EventScript_Archie {
 	msgbox ("Se me cayó el helado en el río.\p :(", MSGBOX_NPC)
@@ -332,4 +331,7 @@ script NicknameBoxMon{
     }
     call(Common_EventScript_TransferredToPC)
  
+}
+
+mapscripts PalletTown_MapScripts {
 }

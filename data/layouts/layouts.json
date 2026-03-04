@@ -9322,34 +9322,14 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_ROUTE01",
+      "id": "LAYOUT_ROUTE01_PAL",
       "name": "Route01_Layout",
       "width": 22,
       "height": 55,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Route01/border.bin",
-      "blockdata_filepath": "data/layouts/Route01/map.bin"
-    },
-    {
-      "id": "LAYOUT_RED_HOUSE_2",
-      "name": "RedHouse_2_Layout",
-      "width": 20,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/RedHouse_2/border.bin",
-      "blockdata_filepath": "data/layouts/RedHouse_2/map.bin"
-    },
-    {
-      "id": "LAYOUT_RED_HOUSE",
-      "name": "RedHouse_Layout",
-      "width": 22,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
-      "border_filepath": "data/layouts/RedHouse/border.bin",
-      "blockdata_filepath": "data/layouts/RedHouse/map.bin"
+      "border_filepath": "data/layouts/Route01_Pal/border.bin",
+      "blockdata_filepath": "data/layouts/Route01_Pal/map.bin"
     },
     {
       "id": "LAYOUT_RED_HOUSE_2F",
@@ -9360,16 +9340,6 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/RedHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/RedHouse_2F/map.bin"
-    },
-    {
-      "id": "LAYOUT_BLUE_HOUSE",
-      "name": "BlueHouse_Layout",
-      "width": 20,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/BlueHouse/border.bin",
-      "blockdata_filepath": "data/layouts/BlueHouse/map.bin"
     },
     {
       "id": "LAYOUT_BLUE_HOUSE_2F",
