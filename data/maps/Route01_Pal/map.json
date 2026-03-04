@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE01",
-  "name": "Route01",
-  "layout": "LAYOUT_ROUTE01",
+  "id": "MAP_ROUTE01_PAL",
+  "name": "Route01_Pal",
+  "layout": "LAYOUT_ROUTE01_PAL",
   "music": "MUS_ROUTE101",
   "region_map_section": "MAPSEC_ROUTE_1",
   "requires_flash": false,
@@ -13,11 +13,6 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
-    {
-      "map": "MAP_PALLET_TOWN",
-      "offset": 0,
-      "direction": "dive"
-    },
     {
       "map": "MAP_PALLET_TOWN_PAL",
       "offset": 0,
